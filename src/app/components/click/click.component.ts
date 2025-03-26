@@ -13,8 +13,10 @@ import { Component } from '@angular/core';
 })
 export class ClickComponent {
   message: string = '';
+  hello: string = 'Hello world!! 👋';
   greet() {
-    console.log('Hello, there 👋');
+    alert(this.hello);
+    console.log(this.hello);
   }
   onMouseOver() {
     this.message = 'Way to go 🚀';

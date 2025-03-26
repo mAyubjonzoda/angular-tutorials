@@ -1,9 +1,16 @@
 import { Component } from '@angular/core';
-import { FormsComponent } from '../../components/forms/forms.component';
+import { InputComponent } from '../../components/input/input.component';
+import { OutputComponent } from '../../components/output/output.component';
 
 @Component({
   selector: 'app-home',
-  imports: [FormsComponent],
+  imports: [InputComponent, OutputComponent],
   templateUrl: './home.component.html',
 })
-export class HomePageComponent {}
+export class HomePageComponent {
+  items = new Array();
+
+  addItem(item: string) {
+    this.items.push(item);
+  }
+}

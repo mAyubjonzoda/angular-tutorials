@@ -22,5 +22,5 @@ import { Component } from '@angular/core';
 export class NgOptimizedImageComponent {
   logoUrl = '/favicon.ico';
   logoAlt = 'Angular logo';
-  username = 'youngTech';
+  username = 'Muhammad';
 }

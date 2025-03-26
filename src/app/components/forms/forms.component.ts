@@ -10,25 +10,8 @@ import {
 @Component({
   selector: 'app-forms',
   imports: [FormsModule, ReactiveFormsModule],
-  template: `
-    <p>Username: {{ username }}</p>
-    <p>{{ username }}'s favorite framework: {{ favoriteFramework }}</p>
-    <label for="framework">
-      Favorite Framework:
-      <input id="framework" type="text" [(ngModel)]="favoriteFramework" />
-      <button (click)="showFramework()">Show Framework</button>
-    </label>
-
-    <form [formGroup]="profileForm" (ngSubmit)="handleSubmit()">
-      <input type="text" formControlName="name" />
-      <input type="email" formControlName="email" />
-      <button type="submit" [disabled]="!profileForm.valid">Submit</button>
-    </form>
-
-    <h2>Profile Form</h2>
-    <p>Name: {{ profileForm.value.name }}</p>
-    <p>Email: {{ profileForm.value.email }}</p>
-  `,
+  templateUrl: './forms.component.html',
+  styleUrl: './forms.component.scss',
 })
 export class FormsComponent {
   favoriteFramework = '';

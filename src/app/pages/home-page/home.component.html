@@ -1,2 +1,4 @@
-<p>home-page works!</p>
-<app-forms />
+<app-input occupation="Angular Developer"></app-input>
+<app-input />
+<app-output (addItemEvent)="addItem($event)" />
+<p>🐢 all the way down {{ items.length }}</p>
