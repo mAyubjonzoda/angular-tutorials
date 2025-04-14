@@ -9,6 +9,8 @@ import { IfComponent } from './components/if/if.component';
 import { InputComponent } from './components/input/input.component';
 import { OutputComponent } from './components/output/output.component';
 import { NgOptimizedImageComponent } from './components/ng-optimized-image/ng-optimized-image.component';
+import { DirectivesComponent } from './components/directives/directives.component';
+import { ParentComponent } from './components/parent/parent.component';
 
 export const routes: Routes = [
   {
@@ -52,5 +54,13 @@ export const routes: Routes = [
   {
     path: 'ngOpImg',
     component: NgOptimizedImageComponent,
+  },
+  {
+    path: 'directives',
+    component: DirectivesComponent,
+  },
+  {
+    path: 'parent',
+    component: ParentComponent,
   },
 ];

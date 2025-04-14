@@ -1,18 +1,9 @@
 import { Component } from '@angular/core';
-import { InputComponent } from './components/input/input.component';
-import { OutputComponent } from './components/output/output.component';
-import { NgOptimizedImageComponent } from './components/ng-optimized-image/ng-optimized-image.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    InputComponent,
-    OutputComponent,
-    NgOptimizedImageComponent,
-    RouterLink,
-    RouterOutlet,
-  ],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
@@ -59,6 +50,14 @@ export class AppComponent {
     {
       name: 'home',
       link: 'home',
+    },
+    {
+      name: 'directives',
+      link: 'directives',
+    },
+    {
+      name: 'parent',
+      link: 'parent',
     },
   ];
 }

@@ -1,0 +1,37 @@
+<span>{{ "*ngFor" }}</span>
+<div
+  *ngFor="
+    let color of colors;
+    let i = index;
+    let first = first;
+    let last = last
+  "
+>
+  <span>
+    {{ i }} {{ first ? "Я первый" : "" }}
+    {{ last ? "Я последний" : "" }}
+    {{ color }}
+  </span>
+</div>
+<span>{{ "@for" }}</span>
+@for (color of colors; track $index; let i = $index; let first = $first; let
+last = $last) {
+<div>
+  <span>
+    {{ i }} {{ first ? "Я первый" : "" }}
+    {{ last ? "Я последний" : "" }}
+    {{ color }}
+  </span>
+</div>
+} @for (color of emptyColors; track $index; let i = $index; let first = $first;
+let last = $last) {
+<div>
+  <span>
+    {{ i }} {{ first ? "Я первый" : "" }}
+    {{ last ? "Я последний" : "" }}
+    {{ color }}
+  </span>
+</div>
+} @empty {
+<h1>404</h1>
+}

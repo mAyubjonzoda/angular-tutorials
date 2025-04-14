@@ -1,19 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-for',
-  template: `
-    @for(user of users; track user.id) {
-    <p>{{ user.name }}</p>
-    }
-  `,
+  imports: [CommonModule],
+  templateUrl: './for.component.html',
 })
 export class ForComponent {
-  users = [
-    { id: 0, name: 'Sarah' },
-    { id: 1, name: 'Amy' },
-    { id: 2, name: 'Rachel' },
-    { id: 3, name: 'Jessica' },
-    { id: 4, name: 'Poornima' },
-  ];
+  colors = ['red', 'blue', 'yellow', 'green'];
+  emptyColors = [];
 }
