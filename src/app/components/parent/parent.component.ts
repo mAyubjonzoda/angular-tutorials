@@ -7,4 +7,10 @@ import { ChildComponent } from '../child/child.component';
   templateUrl: './parent.component.html',
   styleUrl: './parent.component.scss',
 })
-export class ParentComponent {}
+export class ParentComponent {
+  obj: string = 'parent';
+  public handleEvent(value: string) {
+    this.obj = value;
+  }
+  show: boolean = false;
+}

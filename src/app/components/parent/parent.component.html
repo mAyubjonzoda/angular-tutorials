@@ -1,4 +1,10 @@
-<p>parent works!</p>
-<div style="padding: 2rem; border: 1px solid white">
-  <app-child />
+<p>{{ obj }}</p>
+@if (show) {
+<div style="padding: 1rem; border: 1px solid white">
+  <app-child [title]="obj" (eventChange)="handleEvent($event)"
+    >Hello world!</app-child
+  >
 </div>
+}
+
+<button (click)="show = !show">click me!</button>
